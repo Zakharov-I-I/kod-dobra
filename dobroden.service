@@ -1,0 +1,13 @@
+[Unit]
+Description=DobroDen Telegram bot
+After=network-online.target
+
+[Service]
+WorkingDirectory=/opt/dobroden_bot
+ExecStart=/opt/dobroden_bot/venv/bin/python main.py
+Restart=always
+RestartSec=5
+User=dobroden
+
+[Install]
+WantedBy=multi-user.target
